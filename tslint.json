@@ -1,0 +1,50 @@
+{
+    "extends": "tslint:latest",
+    "rules": {
+        "no-implicit-dependencies": [
+            true,
+            "dev"
+        ],
+        "no-submodule-imports": false,
+        "no-this-assignment": false,
+        "semicolon": [
+            true,
+            "never"
+        ],
+        "quotemark": [
+            true,
+            "single",
+            "jsx-double"
+        ],
+        "no-console": false,
+        "space-before-function-paren": false,
+        "interface-name": [
+            true,
+            "never-prefix"
+        ],
+        "adjacent-overload-signatures": true,
+        "member-access": [
+            false
+        ],
+        "member-ordering": [
+            true,
+            {
+                "order": "fields-first"
+            }
+        ],
+        "object-literal-sort-keys": false,
+        "max-classes-per-file": [
+            true,
+            10
+        ],
+        "variable-name": false,
+        "align": [
+            true,
+            "statements"
+        ],
+        "ordered-imports": false,
+        "max-line-length": false,
+        "radix": false,
+        "arrow-parens": false
+    }
+}

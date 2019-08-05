@@ -1,0 +1,78 @@
+{
+  "name": "egg-passport-weapp",
+  "version": "0.0.0-development",
+  "description": "Wechat mini program passport plugin for egg",
+  "eggPlugin": {
+    "name": "passportWeapp",
+    "dependencies": [
+      "passport"
+    ]
+  },
+  "keywords": [
+    "egg",
+    "eggPlugin",
+    "egg-plugin",
+    "passport-weapp"
+  ],
+  "dependencies": {
+    "debug": "^2.6.1",
+    "egg-passport": "^2.0.1",
+    "passport-weapp": "1.0.1"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^10.12.0",
+    "autod": "^3.0.0",
+    "autod-egg": "^1.0.0",
+    "coffee": "^5.2.1",
+    "egg": "^2.0.0",
+    "egg-bin": "^4.13.1",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.13.0",
+    "egg-ts-helper": "^1.13.0",
+    "ts-node": "^8.2.0",
+    "tsc": "^1.20150623.0",
+    "tslib": "^1.9.3",
+    "tslint": "^5.11.0",
+    "typescript": "3.0",
+    "webstorm-disable-index": "^1.2.0",
+    "semantic-release": "^15.13.19"
+  },
+  "egg": {
+    "typescript": true
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "test": "npm run lint -- --fix && egg-bin pkgfiles && npm run test-local",
+    "test-local": "npm run tsc &&DEBUG=passport-weapp egg-bin test",
+    "tsc": "ets && tsc -p tsconfig.json",
+    "cov": "egg-bin cov",
+    "lint": "tslint .",
+    "ci": "egg-bin pkgfiles --check && npm run lint && npm run test-local && npm run cov",
+    "pkgfiles": "egg-bin pkgfiles",
+    "autod": "autod",
+    "clean": "ets clean",
+    "prepublish": "npm run test-local",
+    "semantic-release": "semantic-release"
+  },
+  "files": [
+    "config",
+    "app.js",
+    "index.d.ts"
+  ],
+  "ci": {
+    "version": "8, 9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jeff-Tian/egg-passport-weapp"
+  },
+  "bugs": {
+    "url": "https://github.com/Jeff-Tian/egg-passport-weapp/issues"
+  },
+  "homepage": "https://github.com/Jeff-Tian/egg-passport-weapp",
+  "author": "jeff.tian@outlook.com",
+  "license": "MIT"
+}

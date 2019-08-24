@@ -21,6 +21,6 @@ jobs:
       run: |
         npm install
         npm run ci
-        npm i codecov && codecov
+        npm i codecov -g && codecov
       env:
         CI: true

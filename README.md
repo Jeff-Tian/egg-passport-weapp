@@ -1,23 +1,23 @@
-# egg-passport-cit
+# egg-passport-weapp
 
-> Citi passport plugin for egg.
+> Wechat miniprogram passport plugin for egg.
 
 [![NPM version][npm-image]][npm-url]
-[![Build Status](https://travis-ci.com/Jeff-Tian/egg-passport-citi.svg?branch=master)](https://travis-ci.com/Jeff-Tian/egg-passport-citi)
-[![codecov](https://codecov.io/gh/Jeff-Tian/egg-passport-citi/branch/master/graph/badge.svg)](https://codecov.io/gh/Jeff-Tian/egg-passport-citi)
+[![Build Status](https://travis-ci.com/Jeff-Tian/egg-passport-weapp.svg?branch=master)](https://travis-ci.com/Jeff-Tian/egg-passport-weapp)
+[![codecov](https://codecov.io/gh/Jeff-Tian/egg-passport-weapp/branch/master/graph/badge.svg)](https://codecov.io/gh/Jeff-Tian/egg-passport-weapp)
 [![David deps][david-image]][david-url]
 [![Known Vulnerabilities][snyk-image]][snyk-url]
 [![npm download][download-image]][download-url]
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
-[npm-image]: https://img.shields.io/npm/v/egg-passport-citi.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/egg-passport-citi
-[david-image]: https://img.shields.io/david/jeff-tian/egg-passport-citi.svg?style=flat-square
-[david-url]: https://david-dm.org/jeff-tian/egg-passport-citi
-[snyk-image]: https://snyk.io/test/npm/egg-passport-citi/badge.svg?style=flat-square
-[snyk-url]: https://snyk.io/test/npm/egg-passport-citi
-[download-image]: https://img.shields.io/npm/dm/egg-passport-citi.svg?style=flat-square
-[download-url]: https://npmjs.org/package/egg-passport-citi
+[npm-image]: https://img.shields.io/npm/v/egg-passport-weapp.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/egg-passport-weapp
+[david-image]: https://img.shields.io/david/jeff-tian/egg-passport-weapp.svg?style=flat-square
+[david-url]: https://david-dm.org/jeff-tian/egg-passport-weapp
+[snyk-image]: https://snyk.io/test/npm/egg-passport-weapp/badge.svg?style=flat-square
+[snyk-url]: https://snyk.io/test/npm/egg-passport-weapp
+[download-image]: https://img.shields.io/npm/dm/egg-passport-weapp.svg?style=flat-square
+[download-url]: https://npmjs.org/package/egg-passport-weapp
 
 <!--
 Description here.
@@ -30,16 +30,16 @@ Open [https://uniheart.herokuapp.com/](https://uniheart.herokuapp.com/) to see t
 ## Install
 
 ```bash
-$ npm i egg-passport-citi --save
+$ npm i egg-passport-weapp --save
 ```
 
 ## Usage
 
 ```js
 // {app_root}/config/plugin.[t|j]s
-exports.passportCiti = {
+exports.passportWeapp = {
   enable: true,
-  package: "egg-passport-wechat-ts"
+  package: "egg-passport-weapp"
 };
 ```
 
@@ -47,7 +47,7 @@ exports.passportCiti = {
 
 ```js
 // {app_root}/config/config.default.[t|j]s
-exports.passportCiti = {
+exports.passportWeapp = {
   key: "your oauth key",
   secret: "your oauth secret"
 };

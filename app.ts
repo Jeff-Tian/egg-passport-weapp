@@ -51,6 +51,7 @@ export default (app: Application) => {
                 : "unknown",
           accessToken,
           refreshToken,
+          session_key: profile.session_key,
           profile
         };
 

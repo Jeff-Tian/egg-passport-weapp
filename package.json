@@ -17,7 +17,7 @@
   "dependencies": {
     "debug": "^2.6.1",
     "egg-passport": "^2.0.1",
-    "passport-weapp": "1.0.1"
+    "passport-weapp": "^1.1.0"
   },
   "devDependencies": {
     "@types/mocha": "^5.2.6",

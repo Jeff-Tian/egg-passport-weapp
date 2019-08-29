@@ -29,4 +29,13 @@ describe("test/passport-weapp.test.ts", () => {
       .expect(500);
     // .expect(/openid/);
   });
+
+  it("should not redirect", async () => {
+
+
+    return app
+      .httpRequest()
+      .get("/passport/weapp/callback?code=022b33C51dEMRS1gPoC51nVTB51b33CJ")
+      .expect(200);
+  });
 });

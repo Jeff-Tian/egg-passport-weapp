@@ -2,5 +2,6 @@
 
 exports.passportWeapp = {
   key: "",
-  secret: ""
+  secret: "",
+  successReturnToOrRedirect: ""
 };

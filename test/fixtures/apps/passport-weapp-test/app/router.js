@@ -7,5 +7,9 @@ module.exports = app => {
     ctx.body = "hi, " + app.plugins.passportWeapp.name;
   });
 
-  app.passport.mount("weapp");
+  app.passport.mount("weapp", app.config.passportWeapp);
+
+  router.get("/passport/weapp/callback", ctx => {
+    ctx.body = "hello";
+  });
 };

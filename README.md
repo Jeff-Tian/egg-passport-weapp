@@ -51,6 +51,18 @@ exports.passportWeapp = {
   key: "your oauth key",
   secret: "your oauth secret"
 };
+
+// {app_root}/app/router.js
+
+app.passport.mount("weapp", app.config.passportWeapp);
+router.get("/passport/weapp/callback", ctx => {
+  // Now get you get ctx.user, write your login logic here,
+  // for example, write session
+  ctx.session.userId = ctx.user.id;
+
+  // And then return something instead of redirect
+  ctx.body = ctx.user;
+});
 ```
 
 see [config/config.default.ts](config/config.default.ts) for more detail.

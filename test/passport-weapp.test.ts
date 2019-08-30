@@ -1,5 +1,6 @@
 const mock = require("egg-mock");
 const request = require("supertest");
+const nock = require("nock");
 
 describe("test/passport-weapp.test.ts", () => {
   let app: any;
@@ -31,7 +32,15 @@ describe("test/passport-weapp.test.ts", () => {
   });
 
   it("should not redirect", async () => {
-
+    nock("https://api.weixin.qq.com")
+      .get(
+        "/sns/jscode2session?appid=xxx&secret=yyy&js_code=022b33C51dEMRS1gPoC51nVTB51b33CJ&grant_type=authorization_code"
+      )
+      .reply(200, {
+        openid: "xxx",
+        session_key: "xxx",
+        unionid: "xxx"
+      });
 
     return app
       .httpRequest()

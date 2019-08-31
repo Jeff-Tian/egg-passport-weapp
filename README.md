@@ -71,6 +71,10 @@ see [config/config.default.ts](config/config.default.ts) for more detail.
 
 <!-- example here -->
 
+|                                    Wechat Mini Program                                    |                                    Wechat Mini Program Demo version                                     |
+| :---------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------: |
+| ![Hardway](https://github.com/Jeff-Tian/me/raw/master/src/images/gh_e56e6784a430_258.jpg) | ![Hardway Demo](https://github.com/Jeff-Tian/me/raw/master/src/images/odrHN4lVhrjiktR18jU8Hn1Z2chY.jpg) |
+
 ## Questions & Suggestions
 
 Please open an issue [here](https://github.com/eggjs/egg/issues).

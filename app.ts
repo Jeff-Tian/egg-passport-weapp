@@ -4,8 +4,11 @@ const debug = require("debug")("egg-passport-weapp");
 const assert = require("assert");
 const Strategy = require("passport-weapp").Strategy;
 
-export default (app: Application) => {
-  const config = app.config.passportWeapp;
+function mountOneClient(
+  config: any,
+  app: Application,
+  client: string = "weapp"
+) {
   config.passReqToCallback = true;
 
   assert(config.key, "[egg-passport-weapp] config.passportWeapp.key required");
@@ -15,7 +18,7 @@ export default (app: Application) => {
   );
 
   app.passport.use(
-    "weapp",
+    client,
     new Strategy(
       {
         ...config,
@@ -62,4 +65,18 @@ export default (app: Application) => {
       }
     )
   );
+}
+
+export default (app: Application) => {
+  const config = app.config.passportWeapp;
+
+  if (config.clients) {
+    for (const client in config.clients) {
+      const c = config.clients[client];
+
+      mountOneClient(c, app, client);
+    }
+  } else {
+    mountOneClient(config, app);
+  }
 };
